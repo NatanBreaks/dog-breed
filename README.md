@@ -1,80 +1,39 @@
 # Desafio Dog Breed
+##Teste prático Q9 Tecnologia
 
 ## Objetivos desse desafio
 
+*Consumir uma API fornecida com dois endpoints e criar duas páginas, uma de login, outra de renderização das raças. Na página de renderização devemos ter um efeito de aumentar as fotos dos cachorros
 Esperamos entender melhor os seguintes pontos:
 
-* Como você organiza e documenta o projeto
-* Seu estilo de trabalho e código
-* Seu nível de conhecimento sobre as ferramentas requeridas
+## Ferramentas Utilizadas
 
-## Ferramentas sugeridas
-
-* React+Typescript
-* IoC
-* Testes
-* Linter
+* React
+* Typescript
+* Material UI
+* Styled-Components
+* Componentização
 
 ## Instruções
 
 Esperamos que você crie um app que capture os dados da [nossa api de raças de cachorro](https://dogbreed-api.q9.com.br), e apresente numa interface cumprindo os itens abaixo.
 
-### Página de Cadastro
-
-* Crie uma página `Register` com um campo de email, e autentique o usuário postando o email no [endpoint de cadastro/login](https://dogbreed-api.q9.com.br/register).
-* A chamada na API retornará um `token` JWT, que deverá ser armazenado para ser utilizada nas chamadas seguintes.
-* Após receber e armazenar o `token`, redirecione para a página de `List`.
-* A página de `Register` é a única página de acesso público. As demais rotas são todas privadas e requerem o envio do token conforme a documentação da API abaixo
-
-### Página de Lista de Cachorros
-
-* No carregamento inicial da página de `List`, deverá ser feita uma chamada no [endpoint de list](https://dogbreed-api.q9.com.br/list).
-* A página de `List` deverá ter um menu com quatro rotas - `chihuahua`, `husky`, `labrador` e `pug`.
-* Cada rota, ao ser clicada, deve realizar uma chamada no [endpoint de list](https://dogbreed-api.q9.com.br/list), passando a respectiva `breed`. Quando não especificada, a `breed` default é `chihuahua`.
-
-### Página de Foto
-
-* Ao clicar em uma foto, a foto deverá ser ampliada e destacada dos demais itens da página, com um overlay.
+### LINK DO SITE
+SURGE: https://dogbreed.surge.sh/
 
 ## Documentação da API Dog Breed
 
 URL da API: [`https://dogbreed-api.q9.com.br`](https://dogbreed-api.q9.com.br)
 
-Todas as requisições devem ser feitas com a header Content-Type: application/json.
-As respostas são codificadas em JSON.
+### IMAGENS
+Tela de Login/Cadastro:
+![image](https://user-images.githubusercontent.com/99276733/184728283-204cba62-32c4-48bf-a536-462b0e5c029a.png)
 
-### POST /register
+Tela Inicial:
+![image](https://user-images.githubusercontent.com/99276733/184732514-d0674b54-4e17-41bc-a6c8-329e288b8330.png)
+![image](https://user-images.githubusercontent.com/99276733/184732696-291f08c8-2e50-4f32-af95-7883465719c1.png)
+![image](https://user-images.githubusercontent.com/99276733/184732885-42042b25-cf89-4260-87a7-a80ffa8c524e.png)
+![image](https://user-images.githubusercontent.com/99276733/184734427-f947fa4c-87ec-4e27-b8c6-7de2407a5d6e.png)
 
-#### Cadastro/Login de usuário
 
-```bash
-POST /register
-```
 
-```bash
-curl "https://dogbreed-api.q9.com.br/register" \
--H "Content-Type: application/json" \
--d '{ "email": "name@domain.com" }'
-```
-
-### GET /list
-
-#### Listas de cachorros
-
-```bash
-GET /list
-```
-
-```bash
-curl "https://dogbreed-api.q9.com.br/list" \
--H "Authorization: $TOKEN" \
--H "Content-Type: application/json"
-```
-
-##### Querystring
-
-##### ?breed
-
-**Default**: `chihuahua`<br/>
-**Type**: `string`<br/>
-**Options**: `chihuahua`, `husky`, `pug`, `labrador`
