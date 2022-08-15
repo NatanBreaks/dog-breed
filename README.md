@@ -27,7 +27,6 @@ URL da API: [`https://dogbreed-api.q9.com.br`](https://dogbreed-api.q9.com.br)
 
 ### IMAGENS
 ![image](https://user-images.githubusercontent.com/99276733/184728283-204cba62-32c4-48bf-a536-462b0e5c029a.png)
-
 ![image](https://user-images.githubusercontent.com/99276733/184732514-d0674b54-4e17-41bc-a6c8-329e288b8330.png)
 ![image](https://user-images.githubusercontent.com/99276733/184732696-291f08c8-2e50-4f32-af95-7883465719c1.png)
 ![image](https://user-images.githubusercontent.com/99276733/184732885-42042b25-cf89-4260-87a7-a80ffa8c524e.png)
