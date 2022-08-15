@@ -68,7 +68,7 @@ export default function Home() {
             <H2>{dog.breed}</H2>
             <br/>
             <Images>
-                    <ImageList variant="masonry" cols={3} gap={8}>
+                    <ImageList sx={{ width: "100%" }}variant="masonry" cols={3} gap={8}>
                         {dog.list && dog.list.map((item: any) => (
                             <ImageListItem key={item.img} sx={{}}>
                                 <img
