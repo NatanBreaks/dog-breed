@@ -23,19 +23,31 @@ justify-content: space-around;
 text-align: center;
 background-color: #c8d5fc7d;
 justify-content: space-between;
+@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
+  }
+  margin-left: 10%;
+  margin-right: 10%;
+} 
+
 `
 
 export const Images = styled.div `
+@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
+  }
+
+} 
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 text-align: center;
 background-color: #e7edff;
-@media screen and (min-width: 800px) {
-  .container {
-    margin: 1em 2em;
-  }
-} 
+ width: 500;
+ height: 450;
+ overflow-y:'scroll';
 margin-left: 10%;
 margin-right: 10%;
 

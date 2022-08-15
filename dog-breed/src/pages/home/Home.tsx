@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import api from '../../Services/api'
 import { UseAuth } from "../../hooks/useAuth";
 import { UseProtectPage } from "../../hooks/useProtectPage";
-import { ImageList, ImageListItem, Tabs, Tab, Box } from "@mui/material";
+import { ImageList, ImageListItem, Tabs, Tab, Box, Divider } from "@mui/material";
 import { DOG } from "../../models/dog";
 import { H1, H2, Images, LOGO, Main, Menu } from "./style";
+
 
 
 export default function Home() {
@@ -39,10 +40,10 @@ export default function Home() {
     return (
         <Main>
             <LOGO>
-            <H1>D o g   B r e e d</H1>
+                <H1>D o g   B r e e d</H1>
             </LOGO>
             <Menu>
-                <Box sx={{ width: '100%',display: "flex", justifyContent: "space-around" }}>
+                <Box sx={{ width: '100%', display: "flex", justifyContent: "space-around" }}>
                     <Tabs
                         sx={{
                             "& .Mui-selected": {
@@ -65,19 +66,21 @@ export default function Home() {
                 </Box>
             </Menu>
             <H2>{dog.breed}</H2>
+            <br/>
             <Images>
-                <ImageList sx={{ width: "80vw", height: "90vh" }} cols={3} rowHeight={164}>
-                    {dog.list && dog.list.map((item: any) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item}?w=164&h=164&fit=crop&auto=format`}
-                                srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                    <ImageList variant="masonry" cols={3} gap={8}>
+                        {dog.list && dog.list.map((item: any) => (
+                            <ImageListItem key={item.img} sx={{}}>
+                                <img
+                                    src={`${item}?w=164&h=164&fit=crop&auto=format`}
+                                    srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+
             </Images>
 
 
